@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MAISON NOIR — Premium luxury clothing brand. Discover cinematic fashion for the modern elite." />
+  <meta name="theme-color" content="#0b0f1a" />
+  <title>MAISON NOIR — Luxury Fashion House</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- SCROLL PROGRESS BAR -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">MAISON<span>NOIR</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#collections" class="nav-link">Collections</a></li>
+        <li><a href="#products" class="nav-link">Shop</a></li>
+        <li><a href="#about" class="nav-link">Atelier</a></li>
+        <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+        <li><a href="#newsletter" class="nav-link">Journal</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="nav-cart-btn" id="cartToggle" aria-label="Open cart">
+          <span class="cart-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <path d="M16 10a4 4 0 01-8 0"/>
+            </svg>
+          </span>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <a href="#products" class="nav-cta">Shop Now</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-slides" id="heroSlides">
+
+      <!-- Slide 1 -->
+      <div class="hero-slide active" data-index="0">
+        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1920&q=90')"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="hero-eyebrow reveal-text">SS 2025 Collection</p>
+          <h1 class="hero-title reveal-text">Dressed in<br><em>Silence</em></h1>
+          <p class="hero-subtitle reveal-text">Where restraint becomes power. A collection built for those who speak without words.</p>
+          <div class="hero-actions reveal-text">
+            <a href="#collections" class="btn btn-primary">Explore Collection</a>
+            <a href="#about" class="btn btn-ghost">Our Story</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="hero-slide" data-index="1">
+        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1920&q=90')"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="hero-eyebrow reveal-text">Exclusive Edit</p>
+          <h1 class="hero-title reveal-text">Woven in<br><em>Legacy</em></h1>
+          <p class="hero-subtitle reveal-text">Every thread tells a story. Handcrafted textiles meeting contemporary vision.</p>
+          <div class="hero-actions reveal-text">
+            <a href="#products" class="btn btn-primary">Shop the Edit</a>
+            <a href="#collections" class="btn btn-ghost">View Lookbook</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="hero-slide" data-index="2">
+        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1920&q=90')"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="hero-eyebrow reveal-text">Limited Drop</p>
+          <h1 class="hero-title reveal-text">Beyond the<br><em>Ordinary</em></h1>
+          <p class="hero-subtitle reveal-text">A new standard of luxury. Pieces that define a generation, not just a season.</p>
+          <div class="hero-actions reveal-text">
+            <a href="#products" class="btn btn-primary">Shop Limited</a>
+            <a href="#newsletter" class="btn btn-ghost">Join Waitlist</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Hero Controls -->
+    <div class="hero-controls">
+      <button class="hero-prev" id="heroPrev" aria-label="Previous slide">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <div class="hero-dots" id="heroDots">
+        <button class="hero-dot active" data-index="0"></button>
+        <button class="hero-dot" data-index="1"></button>
+        <button class="hero-dot" data-index="2"></button>
+      </div>
+      <button class="hero-next" id="heroNext" aria-label="Next slide">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ========== BRAND STRIP ========== -->
+  <div class="brand-strip">
+    <div class="strip-track">
+      <span>SUSTAINABLE LUXURY</span><span class="dot"></span>
+      <span>HANDCRAFTED IN ITALY</span><span class="dot"></span>
+      <span>SS 2025 COLLECTION</span><span class="dot"></span>
+      <span>COMPLIMENTARY SHIPPING</span><span class="dot"></span>
+      <span>EXCLUSIVE MEMBERS</span><span class="dot"></span>
+      <span>SUSTAINABLE LUXURY</span><span class="dot"></span>
+      <span>HANDCRAFTED IN ITALY</span><span class="dot"></span>
+      <span>SS 2025 COLLECTION</span><span class="dot"></span>
+      <span>COMPLIMENTARY SHIPPING</span><span class="dot"></span>
+      <span>EXCLUSIVE MEMBERS</span><span class="dot"></span>
+    </div>
+  </div>
+
+  <!-- ========== FEATURED COLLECTIONS ========== -->
+  <section class="collections" id="collections">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Curated Edits</p>
+        <h2 class="section-title">Featured Collections</h2>
+        <p class="section-desc">Each collection is a world unto itself — a narrative of fabric, form, and feeling.</p>
+      </div>
+
+      <div class="collections-grid">
+        <div class="collection-card reveal" data-delay="0">
+          <div class="collection-img-wrap">
+            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=800&q=85" alt="Noir Essentials Collection" loading="lazy" />
+            <div class="collection-overlay">
+              <a href="#products" class="collection-cta">Explore</a>
+            </div>
+          </div>
+          <div class="collection-info">
+            <span class="collection-tag">Signature</span>
+            <h3>Noir Essentials</h3>
+            <p>Timeless wardrobe foundations, elevated.</p>
+          </div>
+        </div>
+
+        <div class="collection-card reveal" data-delay="100">
+          <div class="collection-img-wrap">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=85" alt="Urban Atelier Collection" loading="lazy" />
+            <div class="collection-overlay">
+              <a href="#products" class="collection-cta">Explore</a>
+            </div>
+          </div>
+          <div class="collection-info">
+            <span class="collection-tag">New Season</span>
+            <h3>Urban Atelier</h3>
+            <p>Street precision meets couture craft.</p>
+          </div>
+        </div>
+
+        <div class="collection-card reveal" data-delay="200">
+          <div class="collection-img-wrap">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&q=85" alt="Evening Luxe Collection" loading="lazy" />
+            <div class="collection-overlay">
+              <a href="#products" class="collection-cta">Explore</a>
+            </div>
+          </div>
+          <div class="collection-info">
+            <span class="collection-tag">Limited</span>
+            <h3>Evening Luxe</h3>
+            <p>For moments that demand perfection.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PARALLAX DIVIDER ========== -->
+  <div class="parallax-divider" id="parallaxDivider">
+    <div class="parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1920&q=90')"></div>
+    <div class="parallax-overlay"></div>
+    <div class="parallax-content container">
+      <p class="parallax-quote reveal">"Luxury is not about price. It is about the story sewn into every stitch."</p>
+      <span class="parallax-attr reveal">— The Maison Noir Philosophy</span>
+    </div>
+  </div>
+
+  <!-- ========== PRODUCTS SECTION ========== -->
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">The Edit</p>
+        <h2 class="section-title">Shop the Collection</h2>
+        <p class="section-desc">Pieces that exist beyond trend. Crafted for permanence.</p>
+      </div>
+
+      <div class="products-grid" id="productsGrid">
+
+        <div class="product-card reveal" data-delay="0">
+          <div class="product-img-wrap">
+            <img class="product-img primary" src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=85" alt="Obsidian Wool Coat" loading="lazy" />
+            <img class="product-img secondary" src="https://images.unsplash.com/photo-1578932750294-f5075e85f44a?w=600&q=85" alt="Obsidian Wool Coat Side" loading="lazy" />
+            <span class="product-badge">New</span>
+            <button class="quick-add" data-id="1" data-name="Obsidian Wool Coat" data-price="285000">Add to Cart</button>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Outerwear</span>
+            <h3 class="product-title">Obsidian Wool Coat</h3>
+            <p class="product-price">&#8358;285,000</p>
+          </div>
+        </div>
+
+        <div class="product-card reveal" data-delay="100">
+          <div class="product-img-wrap">
+            <img class="product-img primary" src="https://images.unsplash.com/photo-1594938298603-c8148c4b4a7c?w=600&q=85" alt="Velvet Tailored Blazer" loading="lazy" />
+            <img class="product-img secondary" src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=85" alt="Velvet Tailored Blazer Alt" loading="lazy" />
+            <span class="product-badge badge-sale">Sale</span>
+            <button class="quick-add" data-id="2" data-name="Velvet Tailored Blazer" data-price="195000">Add to Cart</button>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Tailoring</span>
+            <h3 class="product-title">Velvet Tailored Blazer</h3>
+            <p class="product-price">&#8358;195,000</p>
+          </div>
+        </div>
+
+        <div class="product-card reveal" data-delay="200">
+          <div class="product-img-wrap">
+            <img class="product-img primary" src="https://images.unsplash.com/photo-1562157873-818bc0726f68?w=600&q=85" alt="Silk Drape Blouse" loading="lazy" />
+            <img class="product-img secondary" src="https://images.unsplash.com/photo-1544441893-675973e31985?w=600&q=85" alt="Silk Drape Blouse Alt" loading="lazy" />
+            <button class="quick-add" data-id="3" data-name="Silk Drape Blouse" data-price="98000">Add to Cart</button>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Tops</span>
+            <h3 class="product-title">Silk Drape Blouse</h3>
+            <p class="product-price">&#8358;98,000</p>
+          </div>
+        </div>
+
+        <div class="product-card reveal" data-delay="300">
+          <div class="product-img-wrap">
+            <img class="product-img primary" src="https://images.unsplash.com/photo-1548624313-0396814f1656?w=600&q=85" alt="Navy Wide-Leg Trousers" loading="lazy" />
+            <img class="product-img secondary" src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600&q=85" alt="Navy Wide-Leg Trousers Alt" loading="lazy" />
+            <span class="product-badge">Exclusive</span>
+            <button class="quick-add" data-id="4" data-name="Navy Wide-Leg Trousers" data-price="145000">Add to Cart</button>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Trousers</span>
+            <h3 class="product-title">Navy Wide-Leg Trousers</h3>
+            <p class="product-price">&#8358;145,000</p>
+          </div>
+        </div>
+
+        <div class="product-card reveal" data-delay="0">
+          <div class="product-img-wrap">
+            <img class="product-img primary" src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&q=85" alt="Cashmere Knit Sweater" loading="lazy" />
+            <img class="product-img secondary" src="https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=600&q=85" alt="Cashmere Knit Alt" loading="lazy" />
+            <button class="quick-add" data-id="5" data-name="Cashmere Knit Sweater" data-price="178000">Add to Cart</button>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Knitwear</span>
+            <h3 class="product-title">Cashmere Knit Sweater</h3>
+            <p class="product-price">&#8358;178,000</p>
+          </div>
+        </div>
+
+        <div class="product-card reveal" data-delay="100">
+          <div class="product-img-wrap">
+            <img class="product-img primary" src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600&q=85" alt="Structured Evening Gown" loading="lazy" />
+            <img class="product-img secondary" src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=85" alt="Structured Evening Gown Alt" loading="lazy" />
+            <span class="product-badge badge-limited">Limited</span>
+            <button class="quick-add" data-id="6" data-name="Structured Evening Gown" data-price="390000">Add to Cart</button>
+          </div>
+          <div class="product-info">
+            <span class="product-category">Evening</span>
+            <h3 class="product-title">Structured Evening Gown</h3>
+            <p class="product-price">&#8358;390,000</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-imagery reveal">
+          <div class="about-img-main">
+            <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&q=90" alt="Maison Noir Atelier" loading="lazy" />
+          </div>
+          <div class="about-img-accent">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=85" alt="Craftsmanship detail" loading="lazy" />
+          </div>
+          <div class="about-stat-card">
+            <span class="stat-number">20+</span>
+            <span class="stat-label">Years of Craft</span>
+          </div>
+        </div>
+
+        <div class="about-content reveal">
+          <p class="section-eyebrow">Our Atelier</p>
+          <h2 class="about-title">A Fashion House<br>Built on <em>Intention</em></h2>
+          <p class="about-text">Maison Noir was born from the belief that true luxury is not loud. It lives in the precision of a perfectly placed seam, the weight of a fabric chosen for permanence over trend, and the silence between excess and refinement.</p>
+          <p class="about-text">Founded in Lagos, designed for the world. Every piece is a deliberate act — made for those who understand that style is not what you wear, but how you carry what matters.</p>
+          <div class="about-features">
+            <div class="about-feature">
+              <div class="feature-line"></div>
+              <p>Sustainable materials sourced globally</p>
+            </div>
+            <div class="about-feature">
+              <div class="feature-line"></div>
+              <p>Handfinished by master artisans</p>
+            </div>
+            <div class="about-feature">
+              <div class="feature-line"></div>
+              <p>Carbon-neutral production since 2022</p>
+            </div>
+          </div>
+          <a href="#collections" class="btn btn-primary mt-lg">Discover Our World</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Client Stories</p>
+        <h2 class="section-title">What They Say</h2>
+      </div>
+
+      <div class="testimonials-slider-wrap">
+        <div class="testimonials-slider" id="testimonialsSlider">
+
+          <div class="testimonial-card">
+            <div class="stars">
+              <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+            </div>
+            <p class="testimonial-text">"The Obsidian Wool Coat arrived better than I imagined. The weight of the fabric, the precision of the stitching — this is not fast fashion. This is an heirloom."</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&q=80" alt="Amara O." loading="lazy" />
+              <div>
+                <strong>Amara Okonkwo</strong>
+                <span>Lagos, Nigeria</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">
+              <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+            </div>
+            <p class="testimonial-text">"I've shopped at Valentino, at Lemaire, at Toteme. Maison Noir belongs in that conversation. The Navy Trousers are the most elegant piece I own."</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=100&q=80" alt="Zara M." loading="lazy" />
+              <div>
+                <strong>Zara Mensah</strong>
+                <span>Accra, Ghana</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">
+              <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+            </div>
+            <p class="testimonial-text">"Wore the Evening Gown to a black-tie dinner. Three people asked for my stylist. I told them I dressed myself. The silence in the room was everything."</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&q=80" alt="Chisom A." loading="lazy" />
+              <div>
+                <strong>Chisom Adaeze</strong>
+                <span>Abuja, Nigeria</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">
+              <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+            </div>
+            <p class="testimonial-text">"The customer experience matches the quality of the clothes. I was kept informed at every step. This is what luxury service actually looks like."</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80" data-image-type="non-celebrity" alt="Emeka T." loading="lazy" />
+              <div>
+                <strong>Emeka Tunde</strong>
+                <span>Port Harcourt, Nigeria</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">
+              <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+            </div>
+            <p class="testimonial-text">"The Cashmere Knit is so light yet so warm. I wore it on a flight to London and every woman in business class wanted to know the brand. Maison Noir delivered."</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?w=100&q=80" alt="Nkechi B." loading="lazy" />
+              <div>
+                <strong>Nkechi Balogun</strong>
+                <span>Enugu, Nigeria</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="testimonials-controls">
+          <button class="t-prev" id="tPrev" aria-label="Previous review">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="t-dots" id="tDots"></div>
+          <button class="t-next" id="tNext" aria-label="Next review">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== NEWSLETTER ========== -->
+  <section class="newsletter" id="newsletter">
+    <div class="newsletter-bg" style="background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1600&q=85')"></div>
+    <div class="newsletter-overlay"></div>
+    <div class="container newsletter-content reveal">
+      <p class="section-eyebrow light">The Maison Journal</p>
+      <h2 class="newsletter-title">First Access.<br>Every Season.</h2>
+      <p class="newsletter-desc">Join the inner circle. Be first to know about new drops, exclusive events, and the stories behind each collection.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <div class="form-group">
+          <input type="email" class="newsletter-input" placeholder="Your email address" required aria-label="Email address" />
+          <button type="submit" class="btn btn-primary">Join the Circle</button>
+        </div>
+        <p class="form-note">No noise. Only beauty. Unsubscribe anytime.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="footer-logo">MAISON<span>NOIR</span></a>
+          <p class="footer-tagline">Luxury with intention. Fashion with permanence. Style without noise.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter/X">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4l16 16M4 20L20 4"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Pinterest">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.598-.299-1.482c0-1.388.806-2.428 1.808-2.428.852 0 1.265.64 1.265 1.408 0 .858-.548 2.143-.83 3.33-.236.995.499 1.806 1.476 1.806 1.772 0 3.137-1.868 3.137-4.564 0-2.387-1.716-4.057-4.165-4.057-2.836 0-4.5 2.126-4.5 4.326 0 .857.33 1.775.742 2.276.082.099.094.186.069.288-.076.312-.243.995-.276 1.134-.044.183-.146.222-.336.134-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.966-.527-2.292-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+            </a>
+            <a href="https://wa.me/2349031538922" class="social-link" aria-label="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-nav">
+          <h4>Collections</h4>
+          <ul>
+            <li><a href="#collections">Noir Essentials</a></li>
+            <li><a href="#collections">Urban Atelier</a></li>
+            <li><a href="#collections">Evening Luxe</a></li>
+            <li><a href="#products">New Arrivals</a></li>
+            <li><a href="#products">Sale</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav">
+          <h4>Maison</h4>
+          <ul>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#about">Craftsmanship</a></li>
+            <li><a href="#newsletter">Journal</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav">
+          <h4>Client Care</h4>
+          <ul>
+            <li><a href="https://wa.me/2349031538922">WhatsApp Us</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns Policy</a></li>
+            <li><a href="#">Size Guide</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Maison Noir. All rights reserved. Crafted with intention.</p>
+        <p>Lagos, Nigeria — Global Delivery</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== CART DRAWER ========== -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-label="Shopping cart">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="cart-close" id="cartClose" aria-label="Close cart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty" id="cartEmpty">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <p>Your cart is empty</p>
+        <a href="#products" class="btn btn-primary" id="continueShopping">Browse Collection</a>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none">
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">&#8358;0</span>
+      </div>
+      <p class="cart-note">Shipping calculated at checkout</p>
+      <button class="btn btn-primary btn-full" id="checkoutBtn">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <!-- ========== CHECKOUT MODAL ========== -->
+  <div class="modal-overlay" id="modalOverlay"></div>
+  <div class="checkout-modal" id="checkoutModal" role="dialog" aria-label="Order confirmation">
+    <div class="modal-icon">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <h3>Order Received</h3>
+    <p>Thank you for choosing Maison Noir. You are being redirected to WhatsApp to confirm your order with our stylist team.</p>
+    <div class="modal-loader">
+      <div class="loader-bar" id="loaderBar"></div>
+    </div>
+  </div>
+
+  <!-- ========== WHATSAPP FLOAT ========== -->
+  <a href="https://wa.me/2349031538922" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <div class="wa-pulse"></div>
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- ========== BACK TO TOP ========== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <!-- External JS -->
+  <script src="app.js"></script>
+</body>
+</html>
